@@ -88,8 +88,9 @@ public class MusicVisualization extends PApplet{
             float right_y2 = circleY + sin(a + angle) * (50 * player.right.get(i + 1) + 75);
             a += angle;
             // draw
-            stroke(255, 238, 153, 127);
+            stroke(0, 221, 119, 127);
             line(left_x1, left_y1, left_x2, left_y2);
+            stroke(0, 187, 255, 127);
             line(right_x1, right_y1, right_x2, right_y2);
         }
         noStroke();
