@@ -9,7 +9,7 @@
 
   使用Java编程
 
-  > 2019.11.26 PJ1完成
+  使用Processing库
 
 2. 编程画一个真实感静态景物
 
@@ -17,3 +17,10 @@
 
 3. 创作一个Flash动画（用现成的软件，发挥艺术想象力）
 
+	使用软件：
+
+	1. Adobe Animate CC 2019
+
+	2. Adobe Photoshop CC 2019
+
+	
