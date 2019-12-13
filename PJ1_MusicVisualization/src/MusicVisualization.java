@@ -9,8 +9,10 @@ public class MusicVisualization extends PApplet{
     private static String fileName;
     private static boolean isLoaded = false;
 
+    //控制音频播放
     private Minim minim;
     private AudioPlayer player;
+    //对音频进行快速傅里叶变换
     private FFT fft;
 
     @Override
@@ -24,6 +26,10 @@ public class MusicVisualization extends PApplet{
         selectInput("请选择输入的音频文件： ", "loadFile");
     }
 
+    /**
+     * 读入需要载入的音频文件
+     * @param file 用户选取的音频文件
+     */
     public void loadFile(File file){
         if(file == null){
             println("No file selected. Exit. ");
@@ -61,6 +67,9 @@ public class MusicVisualization extends PApplet{
         drawFrequecySpectrum();
     }
 
+    /**
+     * 在窗口中部显示文件名
+     */
     public void displayFileName(){
         fill(119, 119, 119);
         textAlign(CENTER, CENTER);
@@ -69,6 +78,9 @@ public class MusicVisualization extends PApplet{
         text(fileName, width/2, height - 100);
     }
 
+    /**
+     *分别作出音频左右声道的波形图
+     */
     public void drawWaveform(){
         int circleX = width/2;
         int circleY = 150;
@@ -96,6 +108,9 @@ public class MusicVisualization extends PApplet{
         noStroke();
     }
 
+    /**
+     * 对音频作快速傅里叶变换，根据频谱作相应的柱形图
+     */
     public void drawFrequecySpectrum(){
         fft.forward(player.mix);
 
