@@ -7,9 +7,9 @@
 
 1. 编程实现音乐节奏或旋律的可视化
 
-  使用Java编程
+	使用Java编程
 
-  使用Processing库
+	使用Processing库
 
 2. 编程画一个真实感静态景物
 
